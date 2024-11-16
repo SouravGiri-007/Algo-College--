@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-void DFS(int node,vector<int>adjlist[],vector<bool>&visited<int>&ans)
+void DFS(int node,vector<int>adjlist[],vector<bool>& visited, vector<int>&ans)
 {
     visited[node]=1;
     ans.push_back(node);
@@ -12,6 +12,8 @@ void DFS(int node,vector<int>adjlist[],vector<bool>&visited<int>&ans)
         }
     }
 
+
+}
     vector<int>DFSGRAPH(int v,vector<int>adjlist[])
     {
         vector<bool>visited(v,0);
@@ -19,8 +21,6 @@ void DFS(int node,vector<int>adjlist[],vector<bool>&visited<int>&ans)
         DFS(0,adjlist,visited,ans);
         return ans;
     }
-}
-
 int main(){
     int vertex,edges;
     cout<<"enter number of vertex: ";
